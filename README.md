@@ -73,7 +73,7 @@ Select and Terminate the EC2 instance you created earlier.
 
 This will also delete the associated EBS volume, making its snapshot stale.
 
-# 5. Test the Lambda Function
+### 5. Test the Lambda Function
 
 In the Lambda console, click on Deploy to save your changes.
 
