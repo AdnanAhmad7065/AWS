@@ -8,9 +8,9 @@ In this example, we'll create a Lambda function that identifies EBS snapshots th
 
 The Lambda function fetches all EBS snapshots owned by the same account ('self') and also retrieves a list of active EC2 instances (running and stopped). For each snapshot, it checks if the associated volume (if exists) is not associated with any active instance. If it finds a stale snapshot, it deletes it, effectively optimizing storage costs.
 
-#### Step-by-Step Implementation :-
+# Step-by-Step Implementation :-
 
-# 1. Set Up an EC2 Instance and Create an EBS Snapshot
+### 1. Set Up an EC2 Instance and Create an EBS Snapshot
 
 Go to the AWS Management Console and navigate to EC2.
 
@@ -23,7 +23,7 @@ Select the Volume linked to the instance.
 Click Actions → Create Snapshot.
 
 Note down the Snapshot ID for reference.
-# 2. Create an AWS Lambda Function
+### 2. Create an AWS Lambda Function
 
 Go to the Lambda service in the AWS Management Console.
 
@@ -37,7 +37,7 @@ Set the execution timeout to 10 seconds (default is 3 seconds).
 
 In the Function code section, upload or paste the provided Python script (ebs_stale_snapshots.py).
 
-# 3. Assign Necessary Permissions to Lambda
+### 3. Assign Necessary Permissions to Lambda
 
 In the Lambda function's Permissions tab, click on the attached IAM role.
 
@@ -65,7 +65,7 @@ Alternatively, you can create a custom policy with these permissions:
   ]
 }
 
-# 4. Delete the EC2 Instance
+### 4. Delete the EC2 Instance
 
 Return to the EC2 Dashboard.
 
